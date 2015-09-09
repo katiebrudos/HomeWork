@@ -13,7 +13,18 @@ $(document).ready(function () {
     $('span.employee-location').closest('a').attr("href", "#");
 });
 
-$('span.employee-location').closest('a').click(function () {
-    $('.employee-full-name:contains("s")').closest('a').css('background-color', 'red');
-    $('.employee-full-name:contains("S")').closest('li.development').find('a').css('background-color', 'red');
+$('.employee-full-name:contains("s")').closest('a').click(function () {
+    $(this).css('background-color', 'red');
 });
+$('.employee-full-name:contains("S")').closest('a').click(function () {
+    $(this).css('background-color', 'red');
+});
+
+
+//$('.employee-full-name:not(:contains("s"))').closest('a').click(function () {
+//    $(this).css('background-color', 'blue');
+//});
+
+//$('.employee-full-name:not(:contains("S"))').closest('a').click(function () {
+//    $(this).css('background-color', 'blue');
+//});
